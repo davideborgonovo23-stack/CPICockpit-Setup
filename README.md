@@ -8,6 +8,8 @@
 
 ### [⬇ Download the latest version](https://github.com/davideborgonovo23-stack/MyDashboard-Setup/releases/latest)
 
+[What's new in each version (changelog)](CHANGELOG.md)
+
 <img src="img/screenshot.png" width="820" alt="CPI MyDashboard: message monitoring">
 
 </div>
@@ -32,7 +34,7 @@ You enter each customer's API credentials once, for DEV, QLT and PRD. From then 
 2. Run it. No administrator rights are needed. If Windows SmartScreen appears, choose **More info → Run anyway**: the installer is not code-signed yet.
 3. On first start, choose a data folder and add your customers.
 
-To update, install the new version over the old one: your data is kept.
+**Updates:** from version 1.2.0 the app checks this page by itself. When a new version is out it offers to update: one click downloads the installer, checks its SHA-256 fingerprint, installs it and reopens the app. Your data is always kept.
 
 **Requirements:** Windows 10 or 11 (64-bit), HTTPS access to your tenants, and an SAP BTP service key (*Process Integration Runtime*, plan `api`) for each environment. The app includes a step-by-step guide to create it.
 

@@ -4,6 +4,13 @@ All notable changes to CPI MyDashboard are listed here, newest first.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/).
 Every version has its installer (`MyDashboard-Setup-<version>.exe` plus its SHA-256) in the repository's [Releases](https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases).
 
+## [1.3.0] - 2026-09-28
+
+### Added
+- Two labelled buttons in the environment band (next to "configured"):
+  - **Integration Suite**: the Integration Suite home of that tenant. The address is derived from the API URL, so nothing needs to be configured.
+  - **BTP Cockpit** on the environment's subaccount. The subaccount ID comes from the OAuth token. The customer's global account ID is an optional field in New/Edit customer, with an info icon that explains where to find it; if it is missing, the button asks for it once. The address is always the EMEA cockpit.
+
 ## [1.2.0] - 2026-09-28
 
 ### Added
@@ -68,6 +75,7 @@ First release: Windows desktop rewrite of the SAP_CPI_MyDashboard web app.
 - Light and dark theme, 6 languages, custom window frame.
 - Per-user installer that needs no administrator rights; minimal SAP-blue icon.
 
+[1.3.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.0
 [1.2.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.2.0
 [1.1.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.1.0
 [1.0.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.0.0

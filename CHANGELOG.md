@@ -1,0 +1,73 @@
+# Changelog
+
+All notable changes to CPI MyDashboard are listed here, newest first.
+The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/).
+Every version has its installer (`MyDashboard-Setup-<version>.exe` plus its SHA-256) in the repository's [Releases](https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases).
+
+## [1.2.0] - 2026-09-28
+
+### Added
+- **Automatic updates.** The app checks the public [MyDashboard-Setup](https://github.com/davideborgonovo23-stack/MyDashboard-Setup) page 20 seconds after start and then every 24 hours; there is also a manual check in Settings. When a newer version exists it shows a dialog:
+  - **Update** downloads the installer, checks its SHA-256 against the published fingerprint, then installs silently and reopens the app;
+  - **Later** closes the dialog and leaves a highlighted button next to language and theme to reopen it;
+  - **Repository** opens the download page with the full changelog.
+- **Endpoints** section at the top of an iFlow's detail page, read from `/ServiceEndpoints`: protocol (REST/SOAP), endpoint URL with a copy button, and date and time of the last update.
+- **OK** button on the connection settings page. It saves pending changes and opens the customer on the environment just configured.
+
+### Changed
+- Pages keep working when you switch to another one.
+  - A backup keeps running in the background; next to BACKUP in the sidebar a small ring fills up as it progresses. The page shows the progress or the last result when you come back.
+  - The transport history and the notifications section remember search, filters and selection.
+- Notification check interval: from 5 minutes up, in steps of 5 (5, 10 … 60). The default is now 5 minutes instead of 2. Older settings (1 or 2 minutes) become 5.
+- The notifications section says so when no iFlow is monitored. In that case the app makes no calls to SAP at all, not even the OAuth token request.
+
+## [1.1.0] - 2026-09-28
+
+### Added
+- **Transport history**: a new sidebar section, one list per customer, with every transport and its details:
+  - code (`TR-2026-0001`), description, optional reference (ticket or change request);
+  - Windows user and PC, start, end and duration, route, result;
+  - each object with its result and error.
+- The Transport dialog asks for a **description** (at least 3 characters) and an optional **reference**. It shows the transport code while it runs and ends with **Open in history**.
+- **Notes** on a transport. Notes are append-only: they can be added but never edited or removed.
+- **SHA-256 integrity chain** with a badge ("History intact" / "History altered"). Records edited or deleted outside the app are detected; the one known limit is that deleting the very last record leaves no trace.
+- **Re-transport failed objects** in one click. It reopens the Transport with the failed objects selected and the description already filled in.
+- **History of this object** in the right-click menu of the Transport list.
+- History export to Excel, CSV or TXT, either the whole filtered list or a single transport.
+- Deleting a customer that has a transport history shows a warning and suggests deactivating it instead. Deletion is still possible.
+
+### Changed
+- The transport log can no longer be deleted: the "Reset history" button and the 500-row limit are gone.
+- Database schema 2. On first start the app copies the database to `backups/`, then groups the existing log rows into "earlier transports" (same route, at most 5 minutes apart).
+- `.mdbx` export format version 2 carries the history with its fingerprints.
+  - Import adds history without duplicates.
+  - "Replace everything" keeps the history of the customers that are in the file and warns about the others.
+  - Older app versions refuse version 2 files instead of silently dropping the history.
+- Transports left open by a crash or by closing the app are closed as "interrupted" on the next start.
+
+## [1.0.0] - 2026-09-27
+
+First release: Windows desktop rewrite of the SAP_CPI_MyDashboard web app.
+
+### Added
+- Multi-customer workspace with DEV, QLT and PRD environments.
+- Monitoring:
+  - Message Processing Logs with filters, quick time ranges and custom headers;
+  - error details and attachments.
+- Packages and deployed content: artifacts, versions, configurations and resources, with downloads.
+- Transport between environments:
+  - single artifact or whole package, with step-by-step progress and a transport log;
+  - a stronger confirmation for PRD.
+- Deploy and undeploy, and a ZIP backup of a whole tenant.
+- DataStores and entries, Variables and Number Ranges, with export to Excel, CSV and TXT.
+- Read-only code viewer with syntax colors, line numbers and collapsible blocks.
+- Windows notifications for failed messages, system tray icon, start with Windows.
+- Import from the web app, and `.mdbx` export/import protected by a password.
+- OAuth credentials encrypted with AES-256-GCM, with the key protected by Windows DPAPI; HTTPS only.
+- Local data folder chosen by the user, with an automatic daily backup.
+- Light and dark theme, 6 languages, custom window frame.
+- Per-user installer that needs no administrator rights; minimal SAP-blue icon.
+
+[1.2.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.2.0
+[1.1.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.1.0
+[1.0.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.0.0

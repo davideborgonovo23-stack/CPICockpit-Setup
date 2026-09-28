@@ -4,6 +4,11 @@ All notable changes to CPI MyDashboard are listed here, newest first.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/).
 Every version has its installer (`MyDashboard-Setup-<version>.exe` plus its SHA-256) in the repository's [Releases](https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases).
 
+## [1.3.2] - 2026-09-28
+
+### Changed
+- **Update test release.** No functional changes: this version exists to verify the automatic update from 1.3.1 end to end (dialog, download, silent install, restart).
+
 ## [1.3.1] - 2026-09-28
 
 ### Fixed
@@ -85,6 +90,7 @@ First release: Windows desktop rewrite of the SAP_CPI_MyDashboard web app.
 - Light and dark theme, 6 languages, custom window frame.
 - Per-user installer that needs no administrator rights; minimal SAP-blue icon.
 
+[1.3.2]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.2
 [1.3.1]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.1
 [1.3.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.0
 [1.2.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.2.0

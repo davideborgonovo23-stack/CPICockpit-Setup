@@ -4,6 +4,15 @@ All notable changes to CPI MyDashboard are listed here, newest first.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/).
 Every version has its installer (`MyDashboard-Setup-<version>.exe` plus its SHA-256) in the repository's [Releases](https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases).
 
+## [1.3.4] - 2026-09-29
+
+### Changed
+- **Transport opens instantly:** the list comes from the local cache (0 calls). It is refreshed from the tenant only when older than 15 minutes, or with **Refresh all** (1 + 3 calls per package, ~13 s on 107 packages). Before each transport only the packages of the selection are re-read (3 calls each). If a selected object changed, the list is updated and you are asked to check the selection. After a transport the list is updated locally instead of re-reading the tenant.
+- **Variables:** values are no longer all loaded with the list (73 calls on a real tenant). A click on a variable reads its value (1 call) and shows it in a small dialog, and the value is then kept in memory.
+- **Notifications:** the list of deployed iFlows stays in memory like the other sections instead of being re-read (~900 KB) on every visit.
+- **Automatic memory cleanup:** the data of a section left unused for 20 minutes is freed and reloaded on return. This never happens while a load is running.
+- **Transport history:** after the first load only new transports, items and notes are read. Integrity is checked in the background (separate isolate): the full check runs when the history is opened, then only new records are checked. Search uses a precomputed text per transport.
+
 ## [1.3.3] - 2026-09-28
 
 ### Changed
@@ -95,6 +104,7 @@ First release: Windows desktop rewrite of the SAP_CPI_MyDashboard web app.
 - Light and dark theme, 6 languages, custom window frame.
 - Per-user installer that needs no administrator rights; minimal SAP-blue icon.
 
+[1.3.4]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.4
 [1.3.3]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.3
 [1.3.2]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.2
 [1.3.1]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.1

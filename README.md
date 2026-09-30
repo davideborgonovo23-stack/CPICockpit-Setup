@@ -44,6 +44,12 @@ You enter each customer's API credentials once, for DEV, QLT and PRD. From then 
 - Credentials are encrypted with AES-256 and bound to your Windows user.
 - The app talks only to your SAP tenants: no cloud service in between, no telemetry.
 
+## Terms and disclaimer
+
+CPI MyDashboard is free to use under its [terms of use](LICENSE.txt): provided "as is", without warranty. You are responsible for being authorized to access each tenant and for complying with the agreements and policies that apply to it, including the SAP API Policy.
+
+CPI MyDashboard is an independent tool: it is **not developed, endorsed, certified or supported by SAP**. SAP, SAP Integration Suite, SAP Business Technology Platform and other SAP products and services mentioned are trademarks or registered trademarks of SAP SE in Germany and other countries.
+
 ---
 
 <sub>Made by Davide Borgonovo · vibe-coded with <a href="https://claude.com/claude-code">Claude Code</a> · each release lists its changes and the installer's SHA-256.</sub>

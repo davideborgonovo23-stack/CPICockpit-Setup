@@ -1,0 +1,57 @@
+CPI MyDashboard - Terms of Use
+
+Copyright (C) 2026 Davide Borgonovo. All rights reserved.
+
+1. Free use
+You may install and use CPI MyDashboard ("the Software") free of charge, for
+personal and professional purposes, on any number of computers. You may share
+the unmodified installer, provided these terms stay with it. You may not sell
+the Software or charge for it.
+
+2. What is not granted
+The source code is not published. You may not modify, decompile or reverse
+engineer the Software, except where the law gives you that right regardless of
+these terms. No other rights are granted.
+
+3. Your responsibility
+The Software connects to SAP Cloud Integration tenants with the credentials
+you enter. You are responsible for:
+- having the permission of the owner of each tenant to access it with the
+  Software and to read, download or change its content;
+- complying with the agreements and policies that apply to that tenant,
+  including SAP's terms and the SAP API Policy;
+- the data you download, export or transport, including any personal data
+  it contains;
+- keeping your credentials, your data folder and the key for writes to
+  production safe.
+Check every operation before confirming it, above all on production systems.
+
+4. No warranty
+The Software is provided "as is", without warranty of any kind, express or
+implied, including but not limited to merchantability, fitness for a
+particular purpose and non-infringement. It may contain errors and may stop
+working when SAP changes its services.
+
+5. Limitation of liability
+To the maximum extent permitted by applicable law, the author is not liable
+for any damage arising from the use of, or the inability to use, the Software,
+including loss or alteration of data, interruption of integration flows,
+downtime, or loss of profit. Nothing in these terms excludes liability that
+cannot be excluded by law.
+
+6. Not affiliated with SAP
+The Software is an independent tool. It is not developed, endorsed, certified
+or supported by SAP SE or its affiliates. SAP, SAP Integration Suite, SAP
+Business Technology Platform and other SAP products and services mentioned are
+trademarks or registered trademarks of SAP SE in Germany and other countries.
+All other names are trademarks of their respective owners.
+
+7. Third-party components
+The Software includes open-source components, each under its own licence.
+Their notices are included in the Software.
+
+8. Changes
+These terms may change with a new version of the Software. The terms shipped
+with the version you use apply to that version.
+
+By installing or using the Software you accept these terms.

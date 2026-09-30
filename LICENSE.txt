@@ -1,9 +1,9 @@
-CPI MyDashboard - Terms of Use
+CPI Cockpit - Terms of Use
 
 Copyright (C) 2026 Davide Borgonovo. All rights reserved.
 
 1. Free use
-You may install and use CPI MyDashboard ("the Software") free of charge, for
+You may install and use CPI Cockpit ("the Software") free of charge, for
 personal and professional purposes, on any number of computers. You may share
 the unmodified installer, provided these terms stay with it. You may not sell
 the Software or charge for it.

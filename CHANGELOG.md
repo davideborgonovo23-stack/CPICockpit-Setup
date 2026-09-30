@@ -4,6 +4,11 @@ All notable changes to CPI Cockpit (called CPI MyDashboard up to version 1.5.1) 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/).
 Every version has its installer (`CPICockpit-Setup-<version>.exe` plus its SHA-256; `MyDashboard-Setup-<version>.exe` up to 1.5.1) in the repository's [Releases](https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases).
 
+## [1.6.3] - 2026-09-30
+
+### Changed
+- **Shorter log:** packages skipped by the backup (drafts, read-only) are no longer written as warnings, one per package with the full list of drafts: the log gets one line per backup with the counts. Other HTTP errors are written on one line (the page title for HTML error pages, such as 429 Too Many Requests). A failed update check writes only the HTTP status, and the proxy is written only when it changes.
+
 ## [1.6.2] - 2026-09-30
 
 ### Added
@@ -194,6 +199,7 @@ First release: Windows desktop rewrite of the SAP_CPI_MyDashboard web app.
 - Light and dark theme, 6 languages, custom window frame.
 - Per-user installer that needs no administrator rights; minimal SAP-blue icon.
 
+[1.6.3]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.6.3
 [1.6.2]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.6.2
 [1.6.1]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.6.1
 [1.6.0]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.6.0

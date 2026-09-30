@@ -1,8 +1,18 @@
 # Changelog
 
-All notable changes to CPI MyDashboard are listed here, newest first.
+All notable changes to CPI Cockpit (called CPI MyDashboard up to version 1.5.1) are listed here, newest first.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/).
-Every version has its installer (`MyDashboard-Setup-<version>.exe` plus its SHA-256) in the repository's [Releases](https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases).
+Every version has its installer (`CPICockpit-Setup-<version>.exe` plus its SHA-256; `MyDashboard-Setup-<version>.exe` up to 1.5.1) in the repository's [Releases](https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases).
+
+## [1.6.0] - 2026-09-30
+
+### Added
+- **Find in the viewer:** Ctrl+F opens a search bar in the viewer of payloads, scripts, mappings and attachments: number of matches, previous and next (Enter goes to the next one), match case, regular expression. Esc closes it.
+
+### Changed
+- **New name and icon:** the app is now called CPI Cockpit and has a new icon (app window, tray, Start menu, installer). Data, settings and credentials are untouched, and the update installs over the previous version. The installer file is now `CPICockpit-Setup-<version>.exe`.
+- **Monitoring opens on the last hour:** the message list starts with the "Last hour" period, so it loads quickly and without old messages. Choose another period to go further back; "Reset filters" returns to the last hour.
+- **Environment band:** it shows only the full name of the environment, without repeating the DEV / QLT / PRD code, and the "configured" label is gone. "not configured" still appears when the credentials are missing.
 
 ## [1.5.1] - 2026-09-30
 
@@ -168,17 +178,18 @@ First release: Windows desktop rewrite of the SAP_CPI_MyDashboard web app.
 - Light and dark theme, 6 languages, custom window frame.
 - Per-user installer that needs no administrator rights; minimal SAP-blue icon.
 
-[1.5.1]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.5.1
-[1.5.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.5.0
-[1.4.2]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.4.2
-[1.4.1]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.4.1
-[1.4.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.4.0
-[1.3.5]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.5
-[1.3.4]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.4
-[1.3.3]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.3
-[1.3.2]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.2
-[1.3.1]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.1
-[1.3.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.0
-[1.2.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.2.0
-[1.1.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.1.0
-[1.0.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.0.0
+[1.6.0]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.6.0
+[1.5.1]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.5.1
+[1.5.0]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.5.0
+[1.4.2]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.4.2
+[1.4.1]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.4.1
+[1.4.0]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.4.0
+[1.3.5]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.3.5
+[1.3.4]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.3.4
+[1.3.3]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.3.3
+[1.3.2]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.3.2
+[1.3.1]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.3.1
+[1.3.0]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.3.0
+[1.2.0]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.2.0
+[1.1.0]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.1.0
+[1.0.0]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.0.0

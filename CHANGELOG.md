@@ -4,6 +4,12 @@ All notable changes to CPI Cockpit (called CPI MyDashboard up to version 1.5.1) 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/).
 Every version has its installer (`CPICockpit-Setup-<version>.exe` plus its SHA-256; `MyDashboard-Setup-<version>.exe` up to 1.5.1) in the repository's [Releases](https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases).
 
+## [1.6.1] - 2026-09-30
+
+### Changed
+- **New icon:** a pixel-art cloud with a lever and the CPI lettering replaces the previous icon (app window, tray, Start menu, installer).
+- **Backup, packages not downloaded:** each package shows a colored badge with the reason (Read-only for SAP standard packages, Draft, Error). For drafts, only the names of the draft artifacts are listed instead of the full message from the tenant.
+
 ## [1.6.0] - 2026-09-30
 
 ### Added
@@ -178,6 +184,7 @@ First release: Windows desktop rewrite of the SAP_CPI_MyDashboard web app.
 - Light and dark theme, 6 languages, custom window frame.
 - Per-user installer that needs no administrator rights; minimal SAP-blue icon.
 
+[1.6.1]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.6.1
 [1.6.0]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.6.0
 [1.5.1]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.5.1
 [1.5.0]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.5.0

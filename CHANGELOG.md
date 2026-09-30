@@ -4,6 +4,22 @@ All notable changes to CPI MyDashboard are listed here, newest first.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/).
 Every version has its installer (`MyDashboard-Setup-<version>.exe` plus its SHA-256) in the repository's [Releases](https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases).
 
+## [Unreleased]
+
+### Added
+- **Audit page:** the orange button next to Settings on the customers page opens the log of all recorded actions, newest first. Filters by category, outcome, customer, system, user and period, search in every field, detail of each event with its hashes, CSV/XLSX export. A badge shows whether the hash chain is intact. A transport event opens the matching transport in the history.
+
+### Fixed
+- **Link to a disabled environment:** opening a customer page on an environment that is no longer enabled keeps the search and the selection after the redirect.
+
+## [1.4.2] - 2026-09-30
+
+### Changed
+- **Update dialog shows every skipped version:** when the update spans more than one version, the dialog lists the news of all versions after the installed one, newest first, with the earlier ones under "Earlier versions". If the changelog cannot be read, only the latest version is shown as before.
+
+### Fixed
+- **Update check during a download:** a periodic check finishing while a download was running no longer resets the progress and re-enables the Update button.
+
 ## [1.4.1] - 2026-09-30
 
 ### Added
@@ -146,6 +162,7 @@ First release: Windows desktop rewrite of the SAP_CPI_MyDashboard web app.
 - Light and dark theme, 6 languages, custom window frame.
 - Per-user installer that needs no administrator rights; minimal SAP-blue icon.
 
+[1.4.2]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.4.2
 [1.4.1]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.4.1
 [1.4.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.4.0
 [1.3.5]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.5

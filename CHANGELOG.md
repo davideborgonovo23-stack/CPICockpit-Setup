@@ -4,7 +4,7 @@ All notable changes to CPI MyDashboard are listed here, newest first.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/).
 Every version has its installer (`MyDashboard-Setup-<version>.exe` plus its SHA-256) in the repository's [Releases](https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases).
 
-## [Unreleased]
+## [1.5.0] - 2026-09-30
 
 ### Added
 - **Audit page:** the orange button next to Settings on the customers page opens the log of all recorded actions, newest first. Filters by category, outcome, customer, system, user and period, search in every field, detail of each event with its hashes, CSV/XLSX export. A badge shows whether the hash chain is intact. A transport event opens the matching transport in the history.
@@ -162,6 +162,7 @@ First release: Windows desktop rewrite of the SAP_CPI_MyDashboard web app.
 - Light and dark theme, 6 languages, custom window frame.
 - Per-user installer that needs no administrator rights; minimal SAP-blue icon.
 
+[1.5.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.5.0
 [1.4.2]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.4.2
 [1.4.1]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.4.1
 [1.4.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.4.0

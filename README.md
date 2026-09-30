@@ -1,22 +1,22 @@
 <div align="center">
 
-<img src="img/icon.png" width="96" alt="CPI MyDashboard icon">
+<img src="img/icon.png" width="96" alt="CPI Cockpit icon">
 
-# CPI MyDashboard
+# CPI Cockpit
 
 **All your customers' SAP Cloud Integration tenants in one Windows app.**
 
-### [⬇ Download the latest version](https://github.com/davideborgonovo23-stack/MyDashboard-Setup/releases/latest)
+### [⬇ Download the latest version](https://github.com/davideborgonovo23-stack/CPICockpit-Setup/releases/latest)
 
 [What's new in each version (changelog)](CHANGELOG.md)
 
-<img src="img/screenshot.png" width="820" alt="CPI MyDashboard: message monitoring">
+<img src="img/screenshot.png" width="820" alt="CPI Cockpit: message monitoring">
 
 </div>
 
 ## What it is
 
-CPI MyDashboard is a free desktop app for consultants who manage several customers on **SAP Integration Suite (Cloud Integration)**.
+CPI Cockpit is a free desktop app for consultants who manage several customers on **SAP Integration Suite (Cloud Integration)**.
 You enter each customer's API credentials once, for DEV, QLT and PRD. From then on you switch customer or environment with one click, with no browser, tabs or repeated logins.
 
 ## What you can do
@@ -30,7 +30,7 @@ You enter each customer's API credentials once, for DEV, QLT and PRD. From then 
 
 ## Install
 
-1. Download `MyDashboard-Setup-<version>.exe` from the [latest release](https://github.com/davideborgonovo23-stack/MyDashboard-Setup/releases/latest).
+1. Download `CPICockpit-Setup-<version>.exe` from the [latest release](https://github.com/davideborgonovo23-stack/CPICockpit-Setup/releases/latest).
 2. Run it. No administrator rights are needed. If Windows SmartScreen appears, choose **More info → Run anyway**: the installer is not code-signed yet.
 3. On first start, choose a data folder and add your customers.
 
@@ -46,9 +46,9 @@ You enter each customer's API credentials once, for DEV, QLT and PRD. From then 
 
 ## Terms and disclaimer
 
-CPI MyDashboard is free to use under its [terms of use](LICENSE.txt): provided "as is", without warranty. You are responsible for being authorized to access each tenant and for complying with the agreements and policies that apply to it, including the SAP API Policy.
+CPI Cockpit is free to use under its [terms of use](LICENSE.txt): provided "as is", without warranty. You are responsible for being authorized to access each tenant and for complying with the agreements and policies that apply to it, including the SAP API Policy.
 
-CPI MyDashboard is an independent tool: it is **not developed, endorsed, certified or supported by SAP**. SAP, SAP Integration Suite, SAP Business Technology Platform and other SAP products and services mentioned are trademarks or registered trademarks of SAP SE in Germany and other countries.
+CPI Cockpit is an independent tool: it is **not developed, endorsed, certified or supported by SAP**. SAP, SAP Integration Suite, SAP Business Technology Platform and other SAP products and services mentioned are trademarks or registered trademarks of SAP SE in Germany and other countries.
 
 ---
 

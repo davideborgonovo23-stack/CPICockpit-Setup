@@ -4,6 +4,38 @@ All notable changes to CPI MyDashboard are listed here, newest first.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/).
 Every version has its installer (`MyDashboard-Setup-<version>.exe` plus its SHA-256) in the repository's [Releases](https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases).
 
+## [1.4.1] - 2026-09-30
+
+### Added
+- **Column explanations:** hovering a table column header shows what the column means (for example External Key: the custom header "externalKey" written by the iFlow, not a standard SAP field).
+- **Custom Status in Monitoring:** new column and filter; it is also included in the search.
+- **HTML preview in the viewer:** HTML content can be switched between source and rendered preview. No script runs and no remote image is loaded; links are copied, not opened.
+- **Environment check on credentials:** if the address looks like another environment (e.g. "prod" while configuring DEV) a warning stays visible on the credentials page.
+
+### Changed
+- **Deploy and undeploy disabled** for now: the menu entries are hidden.
+- **Data Store entry:** one dialog with two tabs, Body and Headers; headers are shown as a name/value table.
+- **Endpoints:** only the path is shown; the copy button still copies the full address.
+- **Packages › artifacts:** an artifact that exists only as a draft shows just "draft" (in yellow) instead of "Active draft".
+- **Environment band:** icons instead of letters (code for DEV, stethoscope for QLT, factory for PRD); status and BTP buttons have the same height as the icon; on PRD the text is just "Production environment".
+- **Notifications:** shorter texts above the list; the long explanation moved to an info icon.
+- **PRD write key missing:** the transport dialog now says the key is created in the app's general settings, not in the customer or environment settings.
+
+## [1.4.0] - 2026-09-29
+
+### Security
+- **Writes to PRD need the write key.** Deploy, undeploy and transports to PRD ask every time for a write key (a GUID, typing or pasting allowed). It is created once in Settings › Writes to PRD and shown only once: the app keeps only its public part.
+  - The key signs a permit valid only for that operation and tenant, with an expiry; it is closed when the operation ends.
+  - Every call to SAP goes through a single filter. On any tenant configured as PRD (in any customer, even if also set up in another slot) every request other than GET, HEAD, OPTIONS and the token request is blocked unless it carries a valid permit. A bug that skipped the dialog would still be stopped.
+  - Without a key, or if anything is uncertain, writes are blocked. The protection cannot be switched off.
+
+### Added
+- **Audit log.** Every relevant action is recorded with user, PC, customer, system and outcome, in a hash chain like the transport history. Recorded: deploy, undeploy and transports; PRD permits, wrong keys and blocked writes; files saved from the app (downloads, exports, DataStore download, backup); credentials saved or deleted (never their values); customers created, edited, archived and restored; .mdbx export and import; data folder change; backup restore; update installation. Simple views are not recorded. The audit page comes in the next version.
+- **Archived customers.** A customer is no longer deleted: it is archived. Credentials, notification rules and artifact cache are removed; transport history and audit are kept and the history stays viewable. Restorable at any time from the customers page.
+
+### Changed
+- **Import "replace all" never loses history.** Customers not in the file are archived instead of deleted; those in the file keep their history and get credentials, artifact cache and rules from the file.
+
 ## [1.3.5] - 2026-09-29
 
 ### Added
@@ -114,6 +146,8 @@ First release: Windows desktop rewrite of the SAP_CPI_MyDashboard web app.
 - Light and dark theme, 6 languages, custom window frame.
 - Per-user installer that needs no administrator rights; minimal SAP-blue icon.
 
+[1.4.1]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.4.1
+[1.4.0]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.4.0
 [1.3.5]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.5
 [1.3.4]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.4
 [1.3.3]: https://github.com/davideborgonovo23-stack/CPI-MyDashboard/releases/tag/v1.3.3

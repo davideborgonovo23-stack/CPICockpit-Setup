@@ -4,6 +4,16 @@ All notable changes to CPI Cockpit (called CPI MyDashboard up to version 1.5.1) 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/).
 Every version has its installer (`CPICockpit-Setup-<version>.exe` plus its SHA-256; `MyDashboard-Setup-<version>.exe` up to 1.5.1) in the repository's [Releases](https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases).
 
+## [1.6.2] - 2026-09-30
+
+### Added
+- **Complete backup:** after a backup with packages not downloaded, the new button retries only those packages and adds the ones that now download to the same ZIP, without downloading the others again. "New backup" still creates a new ZIP. If the completion is stopped or fails, the ZIP stays as it was.
+
+### Changed
+- **Backup skips SAP standard packages:** packages that are read-only and have SAP as vendor cannot be exported, so the backup no longer tries to download them. The result shows how many were excluded, and a closed section lists their names. Read-only packages from another vendor are still tried.
+- **Backup, link to packages with drafts:** in the list of packages not downloaded, the name of a package with drafts opens its artifacts page in Integration Suite, where the drafts can be saved as a version.
+- **Installer closes and reopens the app:** if CPI Cockpit is open (also only in the tray) when you click Install, the installer closes it, installs and reopens it, instead of asking you to close it. Starting from this version the app closes cleanly on the installer's request; an older version that is still open is terminated.
+
 ## [1.6.1] - 2026-09-30
 
 ### Changed
@@ -184,6 +194,7 @@ First release: Windows desktop rewrite of the SAP_CPI_MyDashboard web app.
 - Light and dark theme, 6 languages, custom window frame.
 - Per-user installer that needs no administrator rights; minimal SAP-blue icon.
 
+[1.6.2]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.6.2
 [1.6.1]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.6.1
 [1.6.0]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.6.0
 [1.5.1]: https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases/tag/v1.5.1

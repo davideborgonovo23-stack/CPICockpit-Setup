@@ -4,6 +4,19 @@ All notable changes to CPI Cockpit (called CPI MyDashboard up to version 1.5.1) 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/).
 Every version has its installer (`CPICockpit-Setup-<version>.exe` plus its SHA-256; `MyDashboard-Setup-<version>.exe` up to 1.5.1) in the repository's [Releases](https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases).
 
+## [1.6.5] - 2026-10-02
+
+### Changed
+- **Tables use the whole width:** columns now grow to fill the available space, and the extra space goes first to the columns whose text is cut. A column with short text gives its space to the others, so on smaller screens fewer values are cut. When a value is still cut, pointing at it shows the full text.
+- **Clearer theme icon:** the theme button in the top bar uses a half circle (system), a sun (light) or a moon (dark), so it no longer looks like the settings gear.
+- **Tooltips everywhere:** buttons, filters, environment switches and toggles across the app now explain what they do when you point at them, in all six languages.
+
+## [1.6.4] - 2026-10-01
+
+### Fixed
+- **Monitoring search reaches every message:** the search and the GUID, Custom Status and custom header filters now query the tenant instead of filtering only the messages already loaded, so a message beyond the first 1000 appears without clicking "Load more". These searches ignore the quick period, so older messages are found too. The search box looks in the iFlow name, the status and the externalKey, without matching case. The externalKey and custom header filters find at most 40 messages.
+- **Data Store search reaches every page:** in Data Stores and in the entries of a Data Store, a search or a filter now reads all pages before filtering, because the tenant does not accept filters on these lists. Before, it filtered only the current page.
+
 ## [1.6.3] - 2026-09-30
 
 ### Changed

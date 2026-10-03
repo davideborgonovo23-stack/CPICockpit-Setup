@@ -4,6 +4,14 @@ All notable changes to CPI Cockpit (called CPI MyDashboard up to version 1.5.1) 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/).
 Every version has its installer (`CPICockpit-Setup-<version>.exe` plus its SHA-256; `MyDashboard-Setup-<version>.exe` up to 1.5.1) in the repository's [Releases](https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases).
 
+## [1.7.0] - 2026-10-03
+
+### Changed
+- **Leaner translations:** about 120 texts left over from the web app and never shown by CPI Cockpit are gone; the texts in use are unchanged in all six languages.
+
+### Removed
+- **Import from the old web app:** the web app has been retired, so Settings › Import and export no longer offers to import its folder. Data moves between PCs with a `.mdbx` file, as before. Transport history already imported from the web app stays where it is.
+
 ## [1.6.5] - 2026-10-02
 
 ### Changed

@@ -10,7 +10,7 @@
 
 [What's new in each version (changelog)](CHANGELOG.md)
 
-<img src="img/screenshot.png" width="820" alt="CPI Cockpit: message monitoring">
+<img src="img/monitoring.png" width="820" alt="CPI Cockpit: message monitoring with the chart of the last 24 hours">
 
 </div>
 
@@ -21,12 +21,22 @@ You enter each customer's API credentials once, for DEV, QLT and PRD. From then 
 
 ## What you can do
 
-- **Monitor** messages: filters, error details, attachments.
+- Work with **workspaces and tabs**: one workspace per customer, its tabs restored at the next start; **Ctrl+K** finds sections, customers and messages.
+- **Monitor** messages: chart of the selected period, filters with value dropdowns, error details, attachments, and one viewer for payloads and Data Store entries.
 - Browse **packages** and **deployed** content, and download artifacts.
 - **Transport** artifacts and packages DEV → QLT → PRD, with a history of who transported what and why.
 - **Deploy / undeploy**, and back up a whole tenant to ZIP.
 - Read **DataStores, Variables and Number Ranges**, and export them to Excel or CSV.
 - Get a **Windows notification** when a message fails.
+
+<table>
+  <tr>
+    <td><img src="img/message.png" alt="Message detail"></td>
+    <td><img src="img/transport.png" alt="Transport to QLT"></td>
+  </tr>
+</table>
+
+<sub>Screenshots use sample data.</sub>
 
 ## Install
 

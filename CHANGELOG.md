@@ -4,6 +4,38 @@ All notable changes to CPI Cockpit (called CPI MyDashboard up to version 1.5.1) 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versions follow [Semantic Versioning](https://semver.org/).
 Every version has its installer (`CPICockpit-Setup-<version>.exe` plus its SHA-256; `MyDashboard-Setup-<version>.exe` up to 1.5.1) in the repository's [Releases](https://github.com/davideborgonovo23-stack/CPI-Cockpit/releases).
 
+## [2.0.0] - 2026-10-09
+
+New compact interface. It updates CPI Cockpit 1.7 in place: same data folder, customers, credentials, history and settings.
+
+### Added
+- **Workspaces and tabs:** every customer is a workspace with up to 10 tabs (sections, messages, iFlows, Data Store entries); a General workspace holds Customers, Settings, Audit, Guide and Import. Tabs are restored at the next start. Right-click a tab to close it, the others, the ones to its right or the suspended ones.
+- **Workspace switcher and command palette:** Alt+W switches customer, Ctrl+K finds sections, customers and recent messages, Alt+1…9 open the sections, Alt+H opens Customers.
+- **Status bar:** shows the environment colour, last update, rows and selection of the current tab, and shortcuts.
+- **Monitoring chart:** messages over the selected period (last hour to 30 days), with the failed ones in red; click a status to filter.
+- **Unified data viewer:** payloads, attachments, Data Store entries, variables and iFlow resources open in one viewer with search (Ctrl+F), wrap, formatting, HTML preview and arrow keys to move between items. The Data Store entry list has its own search box.
+- **Value dropdowns in filters:** the iFlow and Custom Status filters in Monitoring propose the values of recent messages; name, iFlow, type, package and deployed-by filters in the other sections propose the values of the loaded rows. Free text still works.
+- **Row height and columns:** choose 22, 26 or 30 px rows in Settings; show, hide and resize the columns of every table.
+- **Customers table:** configured environments, active notification rules and last use at a glance, without calls to the tenants.
+
+### Changed
+- **Compact design:** thin borders, square corners, steel accent and Barlow / IBM Plex Mono type; the environment colour shows in the status bar, the environment switch, the active tab, the close buttons and the strip of dialogs that write.
+- **Sections:** one toolbar with title, count, search, filters and actions; Packages with the package list on the left; transport history and audit with a detail panel on the right; notifications as a table with a switch and state chips per iFlow.
+- **Pages with an index:** Settings, OAuth credentials (one entry per environment), Guide, Backup and Import show their sections in an index on the left that follows the scroll.
+- **Dialogs:** all dialogs share one compact frame; deploy, undeploy and transport show the target environment in a coloured strip.
+- **Dates:** every date shows as day/month/year, also in exports.
+- **Accessibility:** buttons show a clear border when focused from the keyboard, and secondary text and filled buttons reach a contrast of at least 4.5:1.
+
+### Fixed
+- **Several filters at once:** Monitoring finds messages with a custom header together with status, iFlow or dates, and the iFlow filter no longer depends on upper and lower case. Deployed filters no longer depend on case either.
+
+### Performance
+- **Only what you see works:** only the last 4 tabs used stay live; the others are suspended and show their cached data with an "Update now" bar. Automatic refresh runs only for the visible tab while the window is in front.
+- **Lighter loading:** Monitoring loads 100 messages per page; tables sort and measure only what changed; large payloads are prepared in the background and previewed up to 5 MB.
+
+### Removed
+- **Sidebar and page bar:** replaced by the section rail, the tab strip and the title bar.
+
 ## [1.7.0] - 2026-10-03
 
 ### Changed
